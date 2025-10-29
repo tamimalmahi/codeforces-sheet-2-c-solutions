@@ -17,7 +17,8 @@ This repository helps learners practice and understand solutions for Sheet 2 pro
 ## 📂 Repository Structure
 
 A_ProblemName.c → Solution to Problem A
+
 B_ProblemName.c → Solution to Problem B
 
-Keywords
+## Keywords
 codeforces, codeforces solutions, sheet 2, c language, competitive programming, problem solving, loops, arrays, if statements
