@@ -1,27 +1,35 @@
 #include<stdio.h>
-int main(){
-    int lucky[4] = {4, 7, 47, 744};
-    int a, b, luckyCount = 0;
-    scanf("%d %d", &a, &b);
+#include<stdbool.h>
 
-    for (int i = a; i <= b; i++)
+bool isLucky(int n){
+    while (n > 0)
     {
-        for (int j = 0; j < 4; j++)
+        int digit = n % 10;
+        if (digit != 4 && digit != 7)
+            return false;
+        
+        n = n / 10;
+    }
+    return true;
+}
+
+int main(){
+    int num1, num2;
+    bool found = false;
+    scanf("%d %d", &num1, &num2);
+
+    for (int i = num1; i <= num2; i++)
+    {
+        if (isLucky(i))
         {
-            if (i == lucky[j])
-            {
-                printf("%d ", lucky[j]);
-                luckyCount++;
-            }
-            
+            printf("%d ", i);
+            found = true;
         }
         
     }
-
-    if (luckyCount == 0)
-    {
-        printf("-1\n");
-    }
+    
+    if(!found)
+       printf("-1\n");
     
     return 0;
 }
